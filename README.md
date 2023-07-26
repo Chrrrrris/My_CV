@@ -2,7 +2,7 @@
 
 These are the LaTeX sources for my academic CV.
 
-The CV is based on []
+The CV is based on [Leonardo Uieda](https://github.com/leouieda/cv) and [Sabina sagynbayeva](https://github.com/ssagynbayeva/myCV)
 
 ## Template
 
