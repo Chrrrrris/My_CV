@@ -55,13 +55,13 @@ jobs:
           mkdir output
           cp *.pdf output/
 
-      - name: Push to gh-pages
-        if: success() && github.event_name == 'push'
-        # Don't use tags: https://julienrenaux.fr/2019/12/20/github-actions-security-risk/
-        uses: peaceiris/actions-gh-pages@bbdfb200618d235585ad98e965f4aafc39b4c501
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./output
-          publish_branch: pdf
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
+#       - name: Push to pdf
+#         if: success() && github.event_name == 'push'
+#         # Don't use tags: https://julienrenaux.fr/2019/12/20/github-actions-security-risk/
+#         uses: peaceiris/actions-gh-pages@bbdfb200618d235585ad98e965f4aafc39b4c501
+#         with:
+#           github_token: ${{ secrets.GITHUB_TOKEN }}
+#           publish_dir: ./output
+#           publish_branch: pdf
+#           user_name: 'github-actions[bot]'
+#           user_email: 'github-actions[bot]@users.noreply.github.com'
