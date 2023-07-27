@@ -4,6 +4,8 @@ These are the LaTeX sources for my academic CV.
 
 The CV is based on open-sourced CV tex codes from [Leonardo Uieda](https://github.com/leouieda/cv) and [Sabina Sagynbayeva](https://github.com/ssagynbayeva/myCV).
 
+The latest version of my CV can be seen [here](https://github.com/Chrrrrris/cv/raw/pdf/cv.pdf)
+
 ## Template
 
 You're free to reuse and modify this template under the terms of the BSD
