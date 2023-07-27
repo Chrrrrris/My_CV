@@ -1,4 +1,36 @@
-added with the \lhead{} \rhead{} \lfoot{} \rfoot{} commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Freeman Curriculum Vitae
+% XeLaTeX Template
+% Version 2.0 (19/3/2018)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Vel (vel@LaTeXTemplates.com)
+% Alessandro Plasmati
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+
+
+% NOTICE: This template must be compiled with XeLaTeX, the line above should
+% ensure this happens automatically but if it doesn't you will need to specify 
+% XeLaTeX as the engine in your editor or script
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+% !TEX program = xelatex
+
+\documentclass[10pt]{article} % Font size, can be: 10pt, 11pt or 12pt
+
+\input{structure.tex} % Include the file that specifies the document structure
+
+% Headers and footers can be added with the \lhead{} \rhead{} \lfoot{} \rfoot{} commands
 % Example right footer:
 %\rfoot{\color{headings}{\sffamily Last update: \today. Typeset with Xe\LaTeX}}
 
@@ -13,7 +45,7 @@ added with the \lhead{} \rhead{} \lfoot{} \rfoot{} commands
 
 % Configure a fancy footer
 \newcommand{\Separator}{\hspace{3pt}|\hspace{3pt}}
-\newcommand{\FooterFont}{\footnotesize\color{mediumgray}}
+\newcommand{\FooterFont}{\footnotesize\color{black}}
 \pagestyle{fancy}
 \fancyhf{}
 \lfoot{%
@@ -24,423 +56,365 @@ added with the \lhead{} \rhead{} \lfoot{} \rfoot{} commands
 }
 \rfoot{%
   \FooterFont{}
-  Last updated: \monthyear\today{}
+  Last updated: \today{}
   \Separator{}
   \thepage\space of\space \pageref*{LastPage}
 }
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{1pt}
-
+\preto{\footrule}{\color{lightgray}}
 
 
 \begin{document}
 
-% Begin the multi-column environment
+ % Begin the multi-column environment
 \begin{paracol}{2}
-  %----------------------------------------------------------------------------------------
-  %NAME AND CURRICULUM VITAE TEXT
-  %----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%	NAME AND CURRICULUM VITAE TEXT
+%----------------------------------------------------------------------------------------
 
-  \parbox[top][0.12\textheight][c]{\linewidth}{ % Parbox to hold the author name and CV text; fixed height to match the coloured box to the right, centred vertically and full line width
-    \vspace{-0.04\textheight} % Reduce whitespace above the parbox to separate it from the main content
-    \centering % Centre text
-        {\sffamily\Huge Chris ``Le'' Wang}\\\medskip % Your name
-        {\Huge\color{headings}\cvtextfont Curriculum Vitae}
-  }
-  \switchcolumn % Switch to the next paracol column
-  %----------------------------------------------------------------------------------------
-  %COLOURED CONTACT DETAILS BOX
-  %----------------------------------------------------------------------------------------
+\parbox[top][0.12\textheight][c]{\linewidth}{ % Parbox to hold the author name and CV text; fixed height to match the coloured box to the right, centred vertically and full line width
+	\vspace{-0.04\textheight} % Reduce whitespace above the parbox to separate it from the main content
+	\centering % Centre text
+	{\sffamily\Huge Chris "Le" Wang}\\\medskip % Your name
+	{\Huge\color{headings} Curriculum Vitae}
+}
 
-  \parbox[top][0.12\textheight][c]{\linewidth}{ % Parbox to hold the colour box; fixed height to match the name/CV text to the left, centred vertically and full line width
-    \vspace{-0.04\textheight} % Reduce whitespace above the parbox to separate it from the main content
-    \colorbox{shade}{ % Create the coloured box
-      \begin{supertabular}{p{0.05\linewidth}|p{0.775\linewidth}} % Start a table with two columns, the table will ensure everything is aligned
-        \raisebox{-1pt}{\faHome} & 110 W 39th St, Baltimore, MD, USA \\ % Address
-        \raisebox{-1pt}{\faPhone} & +1 (443) 254-2113 \\ % Phone number
-        \raisebox{0pt}{\small\faEnvelope} & \href{mailto:lwang178@jhu.edu}{lwang178@jhu.edu} \\ % Email address
-        % \raisebox{-1pt}{\small\faDesktop} & \href{https://ssagynbayeva.github.io}{https://ssagynbayeva.github.io} \\ % Website
-        \raisebox{-1pt}{\faGithub} & \href{https://github.com/Chrrrrris}{https://github.com/Chrrrrris} \\ % GitHub profile
-        \raisebox{-1pt}{\faLinkedinSquare} & \href{https://www.linkedin.com/in/chris-wang-a85524223/}{https://www.linkedin.com/in/chris-wang-a85524223/} \\ % LinkedIn profile
-        % See fontawesome.pdf in the fonts folder for all icons you can use
-      \end{supertabular}
-    }
-  }
+\switchcolumn % Switch to the next paracol column
+%----------------------------------------------------------------------------------------
+%	COLOURED CONTACT DETAILS BOX
+%----------------------------------------------------------------------------------------
+
+\parbox[top][0.12\textheight][c]{\linewidth}{ % Parbox to hold the colour box; fixed height to match the name/CV text to the left, centred vertically and full line width
+	\vspace{-0.04\textheight} % Reduce whitespace above the parbox to separate it from the main content
+	\colorbox{shade}{ % Create the coloured box
+		\begin{supertabular}{p{0.05\linewidth}|p{0.775\linewidth}} % Start a table with two columns, the table will ensure everything is aligned
+			\raisebox{-1pt}{\faHome} & 110 W 39th St, Baltimore, MD, USA \\ % Address
+			\raisebox{-1pt}{\faPhone} & +1 (443) 254-2113 \\ % Phone number
+			\raisebox{0pt}{\small\faEnvelope} & \href{mailto:lwang178@jhu.edu}{lwang178@jhu.edu} \\ % Email address
+			% \raisebox{-1pt}{\small\faDesktop} & \href{https://ssagynbayeva.github.io}{https://ssagynbayeva.github.io} \\ % Website
+			\raisebox{-1pt}{\faGithub} & \href{https://github.com/Chrrrrris}{https://github.com/Chrrrrris} \\ % GitHub profile
+			\raisebox{-1pt}{\faLinkedinSquare} & \href{https://www.linkedin.com/in/chris-wang-a85524223/}{https://www.linkedin.com/in/chris-wang-a85524223/} \\ % LinkedIn profile
+			% See fontawesome.pdf in the fonts folder for all icons you can use
+		\end{supertabular}
+	}
+}
 
 \end{paracol}
-\begin{paracol}{1}
-  %----------------------------------------------------------------------------------------
-  %MAJOR RESEARCH PROJECT
-  %----------------------------------------------------------------------------------------
-
-
-  %\medskip % Extra whitespace before the next section
-  %----------------------------------------------------------------------------------------
-  %EDUCATION
-  %----------------------------------------------------------------------------------------
-
-  \section{Education}
-
-  % Blank \educationentry{} command to add another degree:
-
-  %\educationentry{} % Duration
-  %{} % Degree
-  %{} % Honours, achievements or other comments
-  %{} % Department
-  %{} % Institution
-
-  % All 5 parameters must be supplied but any can be empty if you don't need them
-
-  %------------------------------------------------
-
-  \begin{supertabular}{L{4cm}@{\hskip 0.3in}L{13cm}} % Start a table with two columns, the table will ensure everything is aligned
-
-    %------------------------------------------------
-
-
-    %------------------------------------------------
-
-    \educationentry{Aug. 2021 -- May 2025} % Duration
-                   {\textbf{Johns Hopkins University}, \textit{Baltimore, MD, USA}} % Degree
-                   {BSc in Computer Science and Physics} % Department
-                   {GPA: 3.97/4.00} % Major
-                   {Minor: Applied Mathematics \& Statistics, Mathematics} % Minor
-
-                   %------------------------------------------------
-
-                   \educationentry{Aug. 2018 -- May 2021} % Duration
-                                  {\textbf{Hangzhou Foreign Languages School}, \textit{Hangzhou, China}} % Degree
-                                  {GCE A-Level \& Chinese High School Diploma}
-                                  {GPA: 4.0/4.0}
-                                  { }
-
-                                  %------------------------------------------------
-
-  \end{supertabular}
-  \vspace{-0.3cm}
-  %----------------------------------------------------------------------------------------
-  %RESEARCH EXPERIENCE
-  %----------------------------------------------------------------------------------------
-
-  \section{Research Projects}
-
-  % Blank \workposition command to add another job:
-
-  %\workposition{} % Duration
-  %{} % FT/PT (full time or part time)
-  %{} % Employer
-  %{} % Job title, advisors
-  %{} % Project title
-
-  % All 5 parameters must be supplied but any can be empty if you don't need them
-
-  %------------------------------------------------
-
-  \begin{supertabular}{L{4cm}@{\hskip 0.3in}L{13cm}} % Start a table with two columns, the table will ensure everything is aligned
-
-    \workposition{Jan. 2022 -- present} % Duration
-    % FT/PT (full time or part time)
-                 {Schlaufman Exoplanet Group} % Employer
-                 {Advisor: Dr. Kevin C. Schlauman} % Job title
-                 {\begin{itemize}
-                     \vspace{-0.4cm}
-                   \item \textbf{Unresolved Binary Star Rejection}:  assemble photometry for every star confirmed as an open cluster member by Gaia. Write algorithms fit Hertzsprung–Russell diagrams and reject unresolved binary stars in Python.
-                   \item \textbf{Stellar Elemental Abundance and Planet Formation}: Simulate the mass evolution of stellar surface convective zone using Modules for Experiments in Stellar Astrophysics (MESA). Determine the relationship between stellar abundance pattern and planet formation. Coded in Python, C++, Bash, and Fortran.
-                 \end{itemize}} % Project
-
-                 \workposition{May 2022 -- Present} % Duration
-                 % FT/PT (full time or part time)
-                              {Sing Exoplanet Group} % Employer
-                              {Advisors: Dr. David K. Sing, Zafar Rustamkulov} % Job title
-                              {\begin{itemize}
-                                  \vspace{-0.4cm}
-                                \item \textbf{JWST data reduction}: Optimize James Webb Space Telescope's Bright Object Time Series Python codes using nested sampling to extract transit light curves; reduced the light curve extraction runtime by an order of magnitude.
-                                \item \textbf{Transmission Spectroscopy}: Use JWST SOSS and NIRSpec commissioning data to extract transmission spectroscopy of Hat-p-14.
-                              \end{itemize}} % Project
-
-                              \workposition{Apr. 2020 -- Nov. 2020} % Duration
-                              % FT/PT (full time or part time)
-                                           {Polar Research Institute of China (PRIC)} % Employer
-                                           {Advisor: Dr. Peng Jiang} % Job title
-                                           {\begin{itemize}
-                                               \vspace{-0.4cm}
-                                             \item \textbf{General Relativity Testing}: coauthored a paper (three authors contributed equally) on the possibility to detect general relativity in exoplanet systems. Derived an analytic formula evaluating the sensitivity of perihelion’s precession in radial velocity measurements. Explored the possibility to detect general relativistic precession in exoplanets through radial velocity measurements using RadVel.
-                                           \end{itemize}} % Project
-
-                                           % \workposition{Current, from Feb 2021} % Duration
-                                           % {FT} % FT/PT (full time or part time)
-                                           % {Stony Brook University/Flatiron Institute (CCA)} % Employer
-                                           % {Advisor: Dr. Phil Armitage} % Job title
-                                           % {Migration of Planets and Stars in Protoplanetary and AGN Disks} % Project
-
-                                           % %------------------------------------------------
-                                           % \workposition{Jul 2021 -- Aug 2021} % Duration
-                                           % {PT} % FT/PT (full time or part time)
-                                           % {Eureka Scientific} % Employer
-                                           % {Advisor: Dr. Thayne Currie} % Job title
-                                           % {Direct Imaging and Astrometry of an Extrasolar Planet} % Project
-
-                                           \workposition{Jan 2020 -- May 2020} % Duration
-                                           % FT/PT (full time or part time)
-                                                        {Duke University} % Employer
-                                                        {Advisor: Dr. Thomas C. Mehen} % Job title
-                                                        {\begin{itemize}
-                                                            \vspace{-0.4cm}
-                                                          \item \textbf{Quantum Computing}: coauthored a paper on testing  Bell's and Mermin's inequalities on quantum computers. Designed two-Qbit and three-Qbit quantum circuits and analyzed simulation results.
-                                                        \end{itemize}}  % Project
-
-                                                        %------------------------------------------------
-
-                                                        \workposition{July 2019 -- Sept. 2019} % Duration
-                                                        % FT/PT (full time or part time)
-                                                                     {Electron Microscopy Laboratory, Peking University} % Employer
-                                                                     {Advisors: Dr. Qiao Liu} % Job title
-                                                                     {\textbf{Spreading Dynamics of Precursor Film}: reviewed research literature on fluid dynamics, inspected data, and learned microscopy techniques. Conducted simulation experiments to investigate the spreading mechanism of precursor film on a high energy surface and low energy surface; present an 11-page research report.} % Project
-
-                                                                     %------------------------------------------------
-  \end{supertabular}
-  %------------------------------------------------
-
-  \vspace*{1mm} % Standardise the whitespace after this section and before the next (the custom command adds too much otherwise)
-
-  %----------------------------------------------------------------------------------------
-  %PUBLICATIONS
-  %----------------------------------------------------------------------------------------
-
-  \section{Publications}
-
-  % Example \longformdescription{} command to add another publication:
-
-  %\longformpublication{Reference (format this manually as desired)}
-
-  %------------------------------------------------
-  \longformpublication{\textbf{Wang} \& Schlaufman}, {}{``Elemental Abundance Trends with Condensation Temperature are Unrelated to Planet Formation''} \textit{in prep.}
-
-  \longformpublication{Xirui Gou et al. [including \textbf{L. Wang}], \href{https://iopscience.iop.org/article/10.1088/1755-1315/658/1/012051}{``General Relativity Testing in Exoplanetary Systems
-      ``} \textit{IOP Conf. Ser.: Earth Environ. Sci.} (2021).}
-
-  \longformpublication{Yangping Zheng et al. [including \textbf{L. Wang}],  \href{https://trebuchet.public.springernature.app/get_content/e19b1eb6-daac-4e48-a946-f55457e622aa}{``Test of Bell's and Mermin's inequalities on Quantum Computer''} \textit{2020 2nd International Conference on Information Technology and Computer Application} (2020).}
-
-  %----------------------------------------------------------------------------------------
-  %AWARDS
-  %----------------------------------------------------------------------------------------
-
-  \section{Awards \& fellowships}
-
-  % Example \tableentry{} command to add another line:
-
-  %\tableentry{Heading}{Content}{spaceafter}
-
-  % All 3 parameters must be supplied but any can be empty if you don't need them
-  % A "spaceafter" value in the third parameter will add some vertical space -- this is to be used between headings
-
-  %------------------------------------------------
-
-  % Start a table with two columns, the table will ensure everything is aligned
-
-  %------------------------------------------------
-  \begin{supertabular}{L{4cm}@{\hskip 0.3in}L{13cm}}
-    \awardsentry{2023}  % parameter 1
-                {\href{https://hour.jhu.edu/opportunities/summerpura/}{Summer Provost’s Undergraduate Research Award }} % parameter 2
-                {\textit{$\$$6,000, JHU, Research fellowship}} % parameter 3
-
-                \awardsentry{2023}  % parameter 1
-                            {\href{https://krieger.jhu.edu/ursca/projects/aspire-grant/}{Krieger School of Arts \& Science Research Award (Dean's ASPIRE Grants)}} % parameter 2
-                            {\textit{$\$$2,474, JHU, Research fellowship}} % parameter 3
-
-                            \awardsentry{2022}  % parameter 1
-                                        {\href{https://hophacks.com/}{Hophacks $2^{nd}$ place}} % parameter 2
-                                        {\textit{Hopkins's premier 36-hour hackathon. 2/40. $\$$512 prize.}} % parameter 3
-
-                                        \awardsentry{2022}
-                                                    {Quest2Learn Most Innovative Platform to Help with Learning }
-                                                    {\textit{Awarded for creating an application that helps with learning.}}
-                                                    %\tableentry{}{\textit{Awarded to ten best students from Kazakhstan for a research  internship in the US and European universities and laboratories. Funding: \$7,500.}}
-
-
-                                                    %------------------------------------------------
-                                                    \awardsentry{2022}
-                                                                {\href{https://hour.jhu.edu/opportunities/bdpsp/}{Bloomberg Distinguished Professor Fellowship}}
-                                                                {\textit{$\$6,000$, JHU, Research fellowship}}
-
-                                                                \awardsentry{2021--present}
-                                                                            {Dean's List}
-                                                                            {\textit{Excellence in academics. Awarded every semester (4/4).}}
-  \end{supertabular}
-
-
-  %------------------------------------------------
-  % \tableentry{2015}
-  % {Altyn belgi}
-  % {National award for exceptional high-school performance awarded to 2\% of high-school graduates}
-
-  %------------------------------------------------
-
-
-
-  \section{Talks \& Presentations}
-
-  % Example \tableentry{} command to add another line:
-
-  %\tableentry{Heading}{Content}{spaceafter}
-
-  % All 3 parameters must be supplied but any can be empty if you don't need them
-  % A "spaceafter" value in the third parameter will add some vertical space -- this is to be used between headings
-
-  %------------------------------------------------
-
-  % Start a table with two columns, the table will ensure everything is aligned
-
-  %------------------------------------------------
-  \begin{supertabular}{L{4cm}@{\hskip 0.3in}L{13cm}}
-    \talkentry{June 2023}
-              {{Elemental Abundance Trends with Condensation Temperature are Unrelated to Planet Formation}}
-              {Origins of Solar Systems Gordon Research Conference, Mount Holyoke College, MA}
-
-              \talkentry{Aug. 2022}
-                        {\href{https://sites.krieger.jhu.edu/jhu-care/summer-2022/}{Optimizing JWST BOTS Transit Light Curve Fitting}}
-                        {The Center for Astrophysics Research Experience, Johns Hopkins University, MD}
-  \end{supertabular}
-
-
-
-  % Example \tableentry{} command to add another line:
-
-  %\tableentry{Heading}{Content}{spaceafter}
-
-  % All 3 parameters must be supplied but any can be empty if you don't need them
-  % A "spaceafter" value in the third parameter will add some vertical space -- this is to be used between headings
-
-  %------------------------------------------------
-
-  % Start a table with two columns, the table will ensure everything is aligned
-
-  %------------------------------------------------
-
-  %----------------------------------------------------------------------------------------
-  %TEACHING
-  %----------------------------------------------------------------------------------------
-
-  \section{Teaching appointments}
-  %------------------------------------------------
-  \begin{supertabular}{L{4cm}@{\hskip 0.3in}L{13cm}}
-    \teaching{2023 Spring}{Teaching Assistant, AS.171.101 General Physics I (Undergraduate, 46 students)}
-    \teaching{2022 Fall}{Teaching Assistant, AS.171.101 General Physics I (Undergraduate, 23 students)}
-  \end{supertabular}
-
-  \section{Skills}
-  %------------------------------------------------
-
-  % Blank \educationentry{} command to add another degree:
-
-  %\educationentry{} % Duration
-  %{} % Degree
-  %{} % Honours, achievements or distinctions (e.g. first class honours)
-  %{} % Department
-  %{} % Institution
-
-  % All 5 parameters must be supplied but any can be empty if you don't need them
-
-  %------------------------------------------------
-
-
-  \begin{tabular}{L{4cm}@{\hskip 0.3in}L{13cm}} % Start a table with two columns, the table will ensure everything is aligned
-
-    %------------------------------------------------
-
-
-    %------------------------------------------------
-
-    \educationentry{Programming} % Duration
-                   {Python, C/C++, Java, Assembly, Matlab, R, HTML, CSS, JavaScript, Bash, \LaTeX} % Department
-                   {} %Honours
-                   {} % Institution
-                   {}
-                   {}
-                   %------------------------------------------------
-
-                   \educationentry{Languages} % Duration
-                                  {English, Chinese, French} % Degree
-                                  {} % Department
-                                  {} %Honours
-                                  {} % Institution
-                                  {}
-                                  %------------------------------------------------
-
-                                  \educationentry{Astronomy Softwares} % Duration
-                                                 {DS9, MESA} % Degree
-                                                 {} % Department
-                                                 {} %Honours
-                                                 {} % Institution
-                                                 {}
-
-                                                 %------------------------------------------------
-
-                                                 \educationentry{Other} % Duration
-                                                                {Git, Mathematica, JupyterLab, Adobe Lightroom, Adobe Photoshop, Blender} % Degree
-                                                                {} % Department
-                                                                {} %Honours
-                                                                {} % Institution
-                                                                {}
-  \end{tabular}
-  % \section{Languages}
-  % English (advanced), Russian (native), Spanish (B1)
-  %----------------------------------------------------------------------------------------
-  % \section{Hobbies}
-  % %------------------------------------------------
-
-  % % Blank \educationentry{} command to add another degree:
-
-  % %\educationentry{} % Duration
-  % %{} % Degree
-  % %{} % Honours, achievements or distinctions (e.g. first class honours)
-  % %{} % Department
-  % %{} % Institution
-
-  % % All 5 parameters must be supplied but any can be empty if you don't need them
-
-  % %------------------------------------------------
-
-  % \begin{tabular}{rl} % Start a table with two columns, the table will ensure everything is aligned
-
-  % %------------------------------------------------
-
-
-  % %------------------------------------------------
-
-  % \educationentry{Songwriting} % Duration
-  % {} % Degree
-  % {1 album, 3 singles on \href{https://ssagynbayeva.github.io/music}{all streaming platforms}} % Department
-  % {} %Honours
-  % {} % Institution
-  % {}
-
-  % %------------------------------------------------
-
-  % \educationentry{Musical instruments} % Duration
-  % {} % Degree
-  % {drum kit, piano, guitar, ukulele} % Department
-  % {} %Honours
-  % {} % Institution
-  % {}
-
-  % \educationentry{Dance styles} % Duration
-  % {} % Degree
-  % {waacking, house, jazz-funk, vogue} % Department
-  % {} %Honours
-  % {} % Institution
-  % {}
-  % \educationentry{Additional interests} % Duration
-  % {} % Degree
-  % {photography, chess} % Department
-  % {} %Honours
-  % {} % Institution
-  % {}
-  % %------------------------------------------------
-
-  % \end{tabular}
-\end{paracol}
+%----------------------------------------------------------------------------------------
+%	MAJOR RESEARCH PROJECT
+%----------------------------------------------------------------------------------------
+
+
+%\medskip % Extra whitespace before the next section
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education} 
+
+% Blank \educationentry{} command to add another degree:
+
+%\educationentry{} % Duration
+%{} % Degree
+%{} % Honours, achievements or other comments
+%{} % Department
+%{} % Institution
+
+% All 5 parameters must be supplied but any can be empty if you don't need them
+
+%------------------------------------------------
+
+\begin{supertabular}{L{4cm}@{\hskip 0.3in}L{13cm}} % Start a table with two columns, the table will ensure everything is aligned
+
+	%------------------------------------------------
+	
+	
+	%------------------------------------------------
+	
+	\educationentry{Aug. 2021 -- May 2025} % Duration
+	{\textbf{Johns Hopkins University}, \textit{Baltimore, MD, USA}} % Degree
+	{BSc in Computer Science and Physics} % Department
+	{GPA: 3.97/4.00} % Major
+	{Minor: Applied Mathematics \& Statistics, Mathematics} % Minor
+	
+	%------------------------------------------------
+	
+	\educationentry{Aug. 2018 -- May 2021} % Duration
+	{\textbf{Hangzhou Foreign Languages School}, \textit{Hangzhou, China}} % Degree
+	{GCE A-Level \& Chinese High School Diploma}
+        {GPA: 4.0/4.0}
+        { }
+	
+	%------------------------------------------------
+
+\end{supertabular}
+\vspace{-0.3cm}
+%----------------------------------------------------------------------------------------
+%	RESEARCH EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Research Projects}
+
+% Blank \workposition command to add another job:
+
+%\workposition{} % Duration
+%{} % FT/PT (full time or part time)
+%{} % Employer
+%{} % Job title, advisors
+%{} % Project title
+
+% All 5 parameters must be supplied but any can be empty if you don't need them
+
+%------------------------------------------------
+
+\begin{supertabular}{L{4cm}@{\hskip 0.3in}L{13cm}} % Start a table with two columns, the table will ensure everything is aligned
+
+\workposition{Jan. 2022 -- present} % Duration
+ % FT/PT (full time or part time)
+{Schlaufman Exoplanet Group} % Employer
+{Advisor: Dr. Kevin C. Schlauman} % Job title
+{\begin{itemize}
+\vspace{-0.4cm}
+    \item \textbf{Unresolved Binary Star Rejection}:  assemble photometry for every star confirmed as an open cluster member by Gaia. Write algorithms fit Hertzsprung–Russell diagrams and reject unresolved binary stars in Python.
+    \item \textbf{Stellar Elemental Abundance and Planet Formation}: Simulate the mass evolution of stellar surface convective zone using Modules for Experiments in Stellar Astrophysics (MESA). Determine the relationship between stellar abundance pattern and planet formation. Coded in Python, C++, Bash, and Fortran. 
+\end{itemize}} % Project
+
+\workposition{May 2022 -- Present} % Duration
+ % FT/PT (full time or part time)
+{Sing Exoplanet Group} % Employer
+{Advisors: Dr. David K. Sing, Zafar Rustamkulov} % Job title
+{\begin{itemize}
+\vspace{-0.4cm}
+    \item \textbf{JWST data reduction}: Optimize James Webb Space Telescope's Bright Object Time Series Python codes using nested sampling to extract transit light curves; reduced the light curve extraction runtime by an order of magnitude.
+    \item \textbf{Transmission Spectroscopy}: Use JWST SOSS and NIRSpec commissioning data to extract transmission spectroscopy of Hat-p-14. 
+\end{itemize}} % Project
+
+\workposition{Apr. 2020 -- Nov. 2020} % Duration
+ % FT/PT (full time or part time)
+{Polar Research Institute of China (PRIC)} % Employer
+{Advisor: Dr. Peng Jiang} % Job title
+{\begin{itemize}
+\vspace{-0.4cm}
+    \item \textbf{General Relativity Testing}: coauthored a paper (three authors contributed equally) on the possibility to detect general relativity in exoplanet systems. Derived an analytic formula evaluating the sensitivity of perihelion’s precession in radial velocity measurements. Explored the possibility to detect general relativistic precession in exoplanets through radial velocity measurements using RadVel.
+\end{itemize}}
+ 
+
+% \workposition{Current, from Feb 2021} % Duration
+% {FT} % FT/PT (full time or part time)
+% {Stony Brook University/Flatiron Institute (CCA)} % Employer
+% {Advisor: Dr. Phil Armitage} % Job title
+% {Migration of Planets and Stars in Protoplanetary and AGN Disks} % Project
+
+% %------------------------------------------------
+% \workposition{Jul 2021 -- Aug 2021} % Duration
+% {PT} % FT/PT (full time or part time)
+% {Eureka Scientific} % Employer
+% {Advisor: Dr. Thayne Currie} % Job title
+% {Direct Imaging and Astrometry of an Extrasolar Planet} % Project
+
+\workposition{Jan 2020 -- May 2020} % Duration
+ % FT/PT (full time or part time)
+{Duke University} % Employer
+{Advisor: Dr. Thomas C. Mehen} % Job title
+{\begin{itemize}
+\vspace{-0.4cm}
+ \item \textbf{Quantum Computing}: coauthored a paper on testing  Bell's and Mermin's inequalities on quantum computers. Designed two-Qbit and three-Qbit quantum circuits and analyzed simulation results.
+ \end{itemize}}  % Project
+
+%------------------------------------------------
+
+\workposition{July 2019 -- Sept. 2019} % Duration
+ % FT/PT (full time or part time)
+{Electron Microscopy Laboratory, Peking University} % Employer
+{Advisors: Dr. Qiao Liu} % Job title
+{\textbf{Spreading Dynamics of Precursor Film}: reviewed research literature on fluid dynamics, inspected data, and learned microscopy techniques. Conducted simulation experiments to investigate the spreading mechanism of precursor film on a high energy surface and low energy surface; present an 11-page research report.} % Project
+
+%------------------------------------------------
+\end{supertabular}
+%------------------------------------------------
+
+\vspace*{1mm} % Standardise the whitespace after this section and before the next (the custom command adds too much otherwise)
 
 %----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+\section{Publications}
+
+% Example \longformdescription{} command to add another publication:
+
+%\longformpublication{Reference (format this manually as desired)}
+
+%------------------------------------------------
+\longformpublication{\textbf{Wang} \& Schlaufman}, {}{"Elemental Abundance Trends with Condensation Temperature are Unrelated to Planet Formation"} \textit{in prep.}
+
+\longformpublication{Xirui Gou et al. [including \textbf{L. Wang}], \href{https://iopscience.iop.org/article/10.1088/1755-1315/658/1/012051}{"General Relativity Testing in Exoplanetary Systems
+"} \textit{IOP Conf. Ser.: Earth Environ. Sci.} (2021).}
+
+\longformpublication{Yangping Zheng et al. [including \textbf{L. Wang}],  \href{https://trebuchet.public.springernature.app/get_content/e19b1eb6-daac-4e48-a946-f55457e622aa}{"Test of Bell's and Mermin's inequalities on Quantum Computer"} \textit{2020 2nd International Conference on Information Technology and Computer Application} (2020).}
+
+%----------------------------------------------------------------------------------------
+%	AWARDS
+%----------------------------------------------------------------------------------------
+
+\section{Awards \& fellowships}
+
+% Example \tableentry{} command to add another line:
+
+%\tableentry{Heading}{Content}{spaceafter}
+
+% All 3 parameters must be supplied but any can be empty if you don't need them
+% A "spaceafter" value in the third parameter will add some vertical space -- this is to be used between headings
+
+%------------------------------------------------
+
+ % Start a table with two columns, the table will ensure everything is aligned
+	
+	%------------------------------------------------
+\begin{supertabular}{L{4cm}@{\hskip 0.3in}L{13cm}}
+\awardsentry{2023}  % parameter 1
+{\href{https://hour.jhu.edu/opportunities/summerpura/}{Summer Provost’s Undergraduate Research Award }} % parameter 2
+{\textit{$\$$6,000, JHU, Research fellowship}} % parameter 3
+
+\awardsentry{2023}  % parameter 1
+{\href{https://krieger.jhu.edu/ursca/projects/aspire-grant/}{Krieger School of Arts \& Science Research Award (Dean's ASPIRE Grants)}} % parameter 2
+{\textit{$\$$2,474, JHU, Research fellowship}} % parameter 3
+
+\awardsentry{2022}  % parameter 1
+{\href{https://hophacks.com/}{Hophacks $2^{nd}$ place}} % parameter 2
+{\textit{Hopkins's premier 36-hour hackathon. 2/40. $\$$512 prize.}} % parameter 3
+
+\awardsentry{2022}  
+{Quest2Learn Most Innovative Platform to Help with Learning }
+{\textit{Awarded for creating an application that helps with learning.}}
+%\tableentry{}{\textit{Awarded to ten best students from Kazakhstan for a research  internship in the US and European universities and laboratories. Funding: \$7,500.}}
+
+
+%------------------------------------------------
+\awardsentry{2022}  
+{\href{https://hour.jhu.edu/opportunities/bdpsp/}{Bloomberg Distinguished Professor Fellowship}}
+{\textit{$\$$6,000, JHU, Research fellowship}}
+
+\awardsentry{2021--present}  
+{Dean's List}
+{\textit{Excellence in academics. Awarded every semester (4/4).}}
+\end{supertabular}
+
+	
+	%------------------------------------------------
+% 	\tableentry{2015}  
+% 	{Altyn belgi}
+% 	{National award for exceptional high-school performance awarded to 2\% of high-school graduates}
+	
+	%------------------------------------------------
+
+
+
+\section{Talks \& Presentations}
+
+% Example \tableentry{} command to add another line:
+
+%\tableentry{Heading}{Content}{spaceafter}
+
+% All 3 parameters must be supplied but any can be empty if you don't need them
+% A "spaceafter" value in the third parameter will add some vertical space -- this is to be used between headings
+
+%------------------------------------------------
+
+ % Start a table with two columns, the table will ensure everything is aligned
+	
+	%------------------------------------------------
+ \begin{supertabular}{L{4cm}@{\hskip 0.3in}L{13cm}}
+        \talkentry{June 2023} 
+	{{Elemental Abundance Trends with Condensation Temperature are Unrelated to Planet Formation}}
+	{Origins of Solar Systems Gordon Research Conference, Mount Holyoke College, MA}
+
+	\talkentry{Aug. 2022} 
+	{\href{https://sites.krieger.jhu.edu/jhu-care/summer-2022/}{Optimizing JWST BOTS Transit Light Curve Fitting}}
+	{The Center for Astrophysics Research Experience, Johns Hopkins University, MD}
+\end{supertabular}
+
+
+
+% Example \tableentry{} command to add another line:
+
+%\tableentry{Heading}{Content}{spaceafter}
+
+% All 3 parameters must be supplied but any can be empty if you don't need them
+% A "spaceafter" value in the third parameter will add some vertical space -- this is to be used between headings
+
+%------------------------------------------------
+
+ % Start a table with two columns, the table will ensure everything is aligned
+	
+	%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	TEACHING
+%----------------------------------------------------------------------------------------
+
+\section{Teaching appointments} 
+%------------------------------------------------
+    \begin{supertabular}{L{4cm}@{\hskip 0.3in}L{13cm}}
+    \teaching{2023 Spring}{Teaching Assistant, AS.171.101 General Physics I (Undergraduate, 46 students)}
+    \teaching{2022 Fall}{Teaching Assistant, AS.171.101 General Physics I (Undergraduate, 23 students)}
+    \end{supertabular}
+
+\section{Skills} 
+%------------------------------------------------
+
+% Blank \educationentry{} command to add another degree:
+
+%\educationentry{} % Duration
+%{} % Degree
+%{} % Honours, achievements or distinctions (e.g. first class honours)
+%{} % Department
+%{} % Institution
+
+% All 5 parameters must be supplied but any can be empty if you don't need them
+
+%------------------------------------------------
+
+
+\begin{tabular}{L{4cm}@{\hskip 0.3in}L{13cm}} % Start a table with two columns, the table will ensure everything is aligned
+
+	%------------------------------------------------
+	
+	
+	%------------------------------------------------
+	
+	\educationentry{Programming} % Duration
+	{Python, C/C++, Java, Assembly, Matlab, R, HTML, CSS, JavaScript, Bash, \LaTeX} % Department
+	{} %Honours
+	{} % Institution
+	{}
+ {}
+	%------------------------------------------------
+	
+	\educationentry{Languages} % Duration
+	{English, Chinese, French} % Degree
+	{} % Department
+	{} %Honours
+	{} % Institution
+	{}
+	%------------------------------------------------
+	
+	\educationentry{Astronomy Softwares} % Duration
+	{DS9, MESA} % Degree
+	{} % Department
+	{} %Honours
+	{} % Institution
+	{}
+	
+	%------------------------------------------------
+	
+	\educationentry{Other} % Duration
+	{Git, Mathematica, JupyterLab, Adobe Lightroom, Adobe Photoshop, Blender} % Degree
+	{} % Department
+	{} %Honours
+	{} % Institution
+	{}
+\end{tabular}
 
 \end{document}

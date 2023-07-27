@@ -55,7 +55,19 @@
 %	FONTS
 %----------------------------------------------------------------------------------------
 
+\usepackage{fontspec} % Required for specifying custom fonts under XeLaTeX
 
+
+
+\newfontfamily\cvtextfont[Path=fonts/]{freebooterscript} % Create a new font family for the cursive font Freebooter Script, provided with the template in the fonts folder
+
+
+
+
+\newfontfamily{\FA}[Path=fonts/]{FontAwesome} % Create a new font family for FontAwesome icons, provided with the template in the fonts folder
+\input{fonts/fontawesomesymbols-xeluatex.tex} % Load a file to create shortcuts to the icons, see icon examples and their shortcuts in fontawesome.pdf in the fonts folder
+
+% \usepackage[sf,scale=0.95]{libertine} % Load Libertine as a \sffamily font for sans serif titles
 
 % \usepackage[sf,scale=0.95]{libertine} % Load Libertine as a \sffamily font for sans serif titles
 
@@ -154,7 +166,7 @@
 
 % Command for entering a separate qualification
 \newcommand{\workposition}[4]{
-	\textsc{#1} & \expandafter\ifstrequal\expandafter{#2}{}{}{{\raggedright\large\textit{\textbf{#2}}}\\[4pt]} % Duration and Institution
+	\textsc{#1} & \expandafter\ifstrequal\expandafter{#2}{}{}{{\raggedright\large{\textbf{#2}}}\\[4pt]} % Duration and Institution
 	%\expandafter\ifstrequal\expandafter{#4}{}{}{& {}\\} % Honours, achievements or distinctions (e.g. first class honours)
 	\expandafter\ifstrequal\expandafter{#3}{}{}{& #3\\} % Advisors
 	\expandafter\ifstrequal\expandafter{#4}{}{}{& #4\\[6pt]} % description
@@ -224,4 +236,4 @@
 	#1 & % Year
 	\href{http://dx.doi.org/#2}{\expandafter\ifstrequal\expandafter{#3}{firstauthor}{\textbf{doi:#2}}{doi:#2}}% DOI string and if "firstauthor" is entered for the 3rd argument, this makes the DOI string bold indicating a first author publication
 	\expandafter\ifstrequal\expandafter{#4}{}{\\}{\\[3pt]} % Conditional insertion of whitespace if the 4th parameter has any content in it
-}OB
+}
