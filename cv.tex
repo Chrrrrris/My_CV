@@ -42,6 +42,7 @@
 \newcolumntype{C}[1]{>{\PreserveBackslash\centering}p{#1}}
 \newcolumntype{R}[1]{>{\PreserveBackslash\raggedleft}p{#1}}
 \newcolumntype{L}[1]{>{\PreserveBackslash\raggedright}p{#1}}
+\usepackage{longtable}
 
 
 % Configure a fancy footer
@@ -94,7 +95,7 @@
 			\raisebox{-1pt}{\faHome} & 110 W 39th St, Baltimore, MD, USA \\ % Address
 			\raisebox{-1pt}{\faPhone} & +1 (443) 254-2113 \\ % Phone number
 			\raisebox{0pt}{\small\faEnvelope} & \href{mailto:lwang178@jhu.edu}{lwang178@jhu.edu} \\ % Email address
-			% \raisebox{-1pt}{\small\faDesktop} & \href{https://ssagynbayeva.github.io}{https://ssagynbayeva.github.io} \\ % Website
+			\raisebox{-1pt}{\small\faDesktop} & \href{https://astrochriswang.com}{astrochriswang.com} \\ % Website
 			\raisebox{-1pt}{\faGithub} & \href{https://github.com/Chrrrrris}{https://github.com/Chrrrrris} \\ % GitHub profile
 			\raisebox{-1pt}{\faLinkedinSquare} & \href{https://www.linkedin.com/in/chris-wang-a85524223/}{https://www.linkedin.com/in/chris-wang-a85524223/} \\ % LinkedIn profile
 			% See fontawesome.pdf in the fonts folder for all icons you can use
@@ -124,31 +125,29 @@
 % All 5 parameters must be supplied but any can be empty if you don't need them
 
 %------------------------------------------------
-
-\begin{supertabular}{L{4cm}@{\hskip 0.3in}L{13cm}} % Start a table with two columns, the table will ensure everything is aligned
-
+\vspace{-0.4cm}
+\begin{longtable}{L{4cm}@{\hskip 0.15in}L{13.5cm}} % Start a table with two columns, the table will ensure everything is aligned
 	%------------------------------------------------
 	
 	
 	%------------------------------------------------
 	
-	\educationentry{Aug. 2021 -- May 2025} % Duration
+	\collge{Aug. 2021 -- May 2025} % Duration
 	{\textbf{Johns Hopkins University}, \textit{Baltimore, MD, USA}} % Degree
 	{BSc in Computer Science, Physics, and Applied Mathematics \& Statistics} % Department
 	{GPA: 3.95/4.00} % Major
 	{Minor: Mathematics} % Minor
+        {Grad courses taken: 9}
 	
 	%------------------------------------------------
 	
-	\educationentry{Aug. 2018 -- May 2021} % Duration
-	{\textbf{Hangzhou Foreign Languages School}, \textit{Hangzhou, China}} % Degree
-	{GCE A-Level \& Chinese High School Diploma}
-        {GPA: 4.0/4.0}
-        { }	 
+	% \educationentry{Aug. 2018 -- May 2021} % Duration
+	% {\textbf{Hangzhou Foreign Languages School}, \textit{Hangzhou, China}} % Degree
+	% {GCE A-Level \& Chinese High School Diploma}
+ %        {GPA: 4.0/4.0}
 	%------------------------------------------------
 
-\end{supertabular}
-\vspace{-0.3cm}
+\end{longtable}
 %----------------------------------------------------------------------------------------
 %	RESEARCH EXPERIENCE
 %----------------------------------------------------------------------------------------
@@ -166,7 +165,10 @@
 % All 5 parameters must be supplied but any can be empty if you don't need them
 
 %------------------------------------------------
-\begin{supertabular}{L{4cm}@{\hskip 0.3in}L{13cm}} % Start a table with two columns, the table will ensure everything is aligned
+
+\vspace{-0.4cm}
+
+\begin{longtable}{L{4cm}@{\hskip 0.15in}L{13.5cm}} % Start a table with two columns, the table will ensure everything is aligned
 
 \workposition{Jan. 2022 -- present} % Duration
  % FT/PT (full time or part time)
@@ -176,19 +178,24 @@
 \vspace{-0.4cm}
     \item \textbf{Unresolved Binary Star Rejection}:  Assembled photometry for every star confirmed as an open cluster member by Gaia. Designed algorithms that fit Hertzsprung–Russell diagrams and reject unresolved binary stars.
     \item \textbf{Stellar Elemental Abundance and Planet Formation}: Simulated the mass evolution of stellar surface convective zone using Modules for Experiments in Stellar Astrophysics (MESA). Showed there is no relationship between stellar photospheric elemental abundance pattern and planet formation.
-    \item \textbf{Planet Formation with N-body Simulation}: investigate the relative importance between pebble accretion and planetesimal accretion to the outcomes of planet formation directly with numerical simulations and exoplanet demographics. Sample outcomes from Mercury6 that simulate the stochastic stage of planet formation with given initial conditions.
+    \item \textbf{Planet Formation with N-body Simulation}: 
+    \begin{itemize}
+        \item investigate the relative importance between pebble accretion and planetesimal accretion to the outcomes of planet formation directly with numerical simulations and exoplanet demographics with Mercury6.% Sample outcomes from Mercury6 that simulate the stochastic stage of planet formation with given initial conditions.
+        \item investigate the stability of mean-motion-resonance chains for TOI-700 system with Mercury6.
+        \item investigate the planet formation outcomes for MK-dwarf systems with varying disk mass, which is then combined with a volatile growth model to track planets' atmospheric and mantle composition of H$_2$O, N$_2$, and CO$_2$.
+    \end{itemize}
+    % \item \textbf{Stability of Mean-motion-resonance Chains}: investigated the stability of resonant chains for TOI-700 system with N-body simulations from Mercury6.
 \end{itemize}} % Project
-
 \workposition{May 2022 -- Present} % Duration
  % FT/PT (full time or part time)
 {\normalsize Sing Exoplanet Group} % Employer
 {Advisors: Prof. David K. Sing, Zafar Rustamkulov} % Job title
 {\begin{itemize}
 \vspace{-0.4cm}
-    \item \textbf{JWST data reduction pipeline development}: Optimized JWST NIRSPec data reduction pipeline using nested sampling to extract transit light curves; reduced the light curve extraction runtime by an order of magnitude. Integrated the capability to reduce JWST NIRISS/SOSS data to the team's JWST data reduction pipeline originally designed for NIRSPec.
-    \item \textbf{Transmission Spectroscopy}:  Extracted transmission spectra for WASP-96b, HAT-p-14b, and K2-18b. Combined transmission spectrum from SOSS with that derived from various space-based and ground-based observatories for atmospheric retrieval. 
+    \item \textbf{JWST data reduction pipeline development}: Optimized JWST NIRSpec data reduction pipeline using nested sampling to extract transit light curves; reduced the light curve extraction runtime by an order of magnitude. Integrated the capability to reduce JWST NIRISS/SOSS data to the team's JWST data reduction pipeline originally designed for NIRSpec.
+    \item \textbf{Transmission Spectroscopy}:  Extracted transmission spectra for WASP-96b, HAT-P-14b, and K2-18b. Combined transmission spectrum from SOSS with that derived from various space-based and ground-based observatories and retrieved atmospheric properties. 
 \end{itemize}} % Project
-
+\pagebreak
 \workposition{Apr. 2020 -- Nov. 2020} % Duration
  % FT/PT (full time or part time)
 {\normalsize Polar Research Institute of China (PRIC)} % Employer
@@ -224,7 +231,7 @@
 %------------------------------------------------
 
 %------------------------------------------------
-\end{supertabular}
+\end{longtable}
 %------------------------------------------------
 
 \vspace*{1mm} % Standardise the whitespace after this section and before the next (the custom command adds too much otherwise)
@@ -253,67 +260,6 @@
 \end{etaremune}
 
 
-%----------------------------------------------------------------------------------------
-%	AWARDS
-%----------------------------------------------------------------------------------------
-
-\section{Awards \& fellowships}
-
-% Example \tableentry{} command to add another line:
-
-%\tableentry{Heading}{Content}{spaceafter}
-
-% All 3 parameters must be supplied but any can be empty if you don't need them
-% A "spaceafter" value in the third parameter will add some vertical space -- this is to be used between headings
-
-%------------------------------------------------
-
- % Start a table with two columns, the table will ensure everything is aligned
-	
-	%------------------------------------------------
-\begin{supertabular}{L{4cm}@{\hskip 0.3in}L{13cm}}
-\awardsentry{2024}  % parameter 1
-{\href{https://www.idies.jhu.edu/what-we-offer/funding/idies-summer-student-fellowship/}{IDIES Summer Student Fellowship}} % parameter 2
-{\textit{$\$$6,000, JHU, competitive research fellowship awarded to 5 undergraduates conducting data-intensive research.}}
-\awardsentry{2024}  % parameter 1
-{\href{https://www.sigmapisigma.org/sigmapisigma}{$\Sigma\Pi\Sigma$ Physics Honor Society}} % parameter 2
-{\textit{Awarded for outstanding academic achievement in physics and astronomy.}}
-\awardsentry{2023}  % parameter 1
-{\href{https://hour.jhu.edu/opportunities/summerpura/}{Summer Provost’s Undergraduate Research Award }} % parameter 2
-{\textit{$\$$6,000, JHU, competitive research fellowship (36 out of 400+ applicants).}} % parameter 3
-
-\awardsentry{2023}  % parameter 1
-{\href{https://krieger.jhu.edu/ursca/projects/aspire-grant/}{Dean's ASPIRE Grants}} % parameter 2
-{\textit{$\$$2,474, JHU, competitive research fellowship; awarded to 10 undergraduates per year.}} % parameter 3
-
-\awardsentry{2022}  % parameter 1
-{\href{https://hophacks.com/}{Hophacks $2^{nd}$ place}} % parameter 2
-{\textit{Hopkins's premier 36-hour hackathon. 2/40. $\$$512 prize.}} % parameter 3
-
-\awardsentry{2022}  
-{Quest2Learn Most Innovative Platform to Help with Learning }
-{\textit{Awarded for creating an application that helps with learning.}}
-%\tableentry{}{\textit{Awarded to ten best students from Kazakhstan for a research  internship in the US and European universities and laboratories. Funding: \$7,500.}}
-
-
-%------------------------------------------------
-\awardsentry{2022}  
-{\href{https://hour.jhu.edu/opportunities/bdpsp/}{Bloomberg Distinguished Professor Fellowship}}
-{\textit{$\$$6,000, JHU, competitive research fellowship; awarded to 2 physics undergraduates.}}
-
-\awardsentry{2021--present}  
-{\href{https://advising.jhu.edu/student-roadmap/seniors/honors/}{Dean's List}}
-{\textit{Excellence in academics. Awarded every semester (6/6).}}
-\end{supertabular}
-
-	
-	%------------------------------------------------
-% 	\tableentry{2015}  
-% 	{Altyn belgi}
-% 	{National award for exceptional high-school performance awarded to 2\% of high-school graduates}
-	
-	%------------------------------------------------
-
 
 
 \section{Talks \& Presentations}
@@ -330,7 +276,9 @@
  % Start a table with two columns, the table will ensure everything is aligned
 	
 	%------------------------------------------------
- \begin{supertabular}{L{4cm}@{\hskip 0.3in}L{13cm}}
+ \vspace{-0.4cm}
+
+ \begin{longtable}{L{4cm}@{\hskip 0.15in}L{13.5cm}}
  \talkentry{April 2024} 
 	{{FIREFLy-SOSS: Exoplanet Transit Light Curves Extraction Pipeline for JWST NIRISS-SOSS Observations}}
 	{Departmental Undergraduate Research Showcase, Johns Hopkins University, MD}
@@ -352,13 +300,18 @@
      \talkentry{June 2023} 
 	{{Stellar Elemental Abundance Patterns: Implications for Planet Formation}}
 	{No-PhD Journal Club, Johns Hopkins University, MD}
-
+\pagebreak
 	\talkentry{Aug. 2022} 
 	{\href{https://sites.krieger.jhu.edu/jhu-care/summer-2022/}{Optimizing JWST BOTS Transit Light Curve Fitting}}
 	{The Center for Astrophysics Research Experience, Johns Hopkins University, MD}
-\end{supertabular}
+\end{longtable}
 
+\section{Telescope Allocations}
+\vspace{-0.4cm}
 
+ \begin{longtable}{L{4cm}@{\hskip 0.15in}L{13.5cm}}
+ \telescope{2024 Q3}{Apache Point Observatory, ARCTIC, 3 nights}{Synergistic Cool Star Monitoring: Characterization of Starspots}{PIs: Rustamkulov, Z., Allen, N., \textbf{Wang, C. L.}, Wang, G.}
+\end{longtable}
 
 % Example \tableentry{} command to add another line:
 
@@ -379,12 +332,14 @@
 
 \section{Teaching appointments} 
 %------------------------------------------------
-    \begin{supertabular}{L{4cm}@{\hskip 0.3in}L{13cm}}
+\vspace{-0.4cm}
+
+    \begin{longtable}{L{4cm}@{\hskip 0.15in}L{13.5cm}}
     \teaching{2024 Spring}{Teaching Assistant, AS.171.108 General Physics II (Undergraduate, 23 students)}
     \teaching{2023 Fall}{Teaching Assistant, AS.171.107 General Physics I (Undergraduate, 46 students)}
     \teaching{2023 Spring}{Teaching Assistant, AS.171.101 General Physics I (Undergraduate, 46 students)}
     \teaching{2022 Fall}{Teaching Assistant, AS.171.101 General Physics I (Undergraduate, 23 students)}
-    \end{supertabular}
+    \end{longtable}
 
 \section{Skills} 
 %------------------------------------------------
@@ -400,56 +355,37 @@
 % All 5 parameters must be supplied but any can be empty if you don't need them
 
 %------------------------------------------------
+\vspace{-0.4cm}
 
 
-\begin{tabular}{L{4cm}@{\hskip 0.3in}L{13cm}} % Start a table with two columns, the table will ensure everything is aligned
+\begin{longtable}{L{4cm}@{\hskip 0.15in}L{13.5cm}} % Start a table with two columns, the table will ensure everything is aligned
 
 	%------------------------------------------------
 	
 	
 	%------------------------------------------------
 	
-	\educationentry{Computer Slangs} % Duration
-	{Python, C/C++, Java, Assembly, Fortran, Matlab, R, HTML, CSS, JavaScript, Bash} % Department
-	{} %Honours
-	{} % Institution
-	{}
- {}
+	\skill{Computer Slangs} % Duration
+	{Python, C/C++, Java, Assembly, Fortran, Matlab, R, HTML, CSS, JavaScript, Bash} % 
 	%------------------------------------------------
 	
-	\educationentry{Languages} % Duration
+	\skill{Languages} % Duration
 	{English, Chinese, French} % Degree
-	{} % Department
-	{} %Honours
-	{} % Institution
-	{}
 	%------------------------------------------------
 	
-	\educationentry{Astronomy Softwares} % Duration
-	{DS9, Siril, MESA (stellar structure), Rebound (N-body), Mercury (N-body)} % Degree
-	{} % Department
-	{} %Honours
-	{} % Institution
-	{}
+	\skill{Astronomy Softwares} % Duration
+	{DS9, Siril, MESA (stellar structure), Rebound (N-body), Mercury (N-body), petitRADTRANS (atmospheric retrieval)} % 
 	
 	%------------------------------------------------
 
- 	\educationentry{Observation Qualifications} % Duration
+ 	\skill{Observation Experience} % Duration
 	{The Morris W. Offit Telescope (half-meter telescope at JHU), ARC 3.5m telescope at Apache Point Observatory} % Degree
-	{} % Department
-	{} %Honours
-	{} % Institution
-	{}
-	
+
 	%------------------------------------------------
 	
 	
-	\educationentry{Other} % Duration
-	{Pytorch, \LaTeX, Git, Slurm, Mathematica, JupyterLab, Adobe Lightroom, Adobe Photoshop, Blender, Soccer, A Cappella, Marathon} % Degree
-	{} % Department
-	{} %Honours
-	{} % Institution
-	{}
-\end{tabular}
+	\skill{Other} % Duration
+	{Pytorch, \LaTeX, Git, Slurm, Mathematica, JupyterLab, Adobe Lightroom, Adobe Photoshop, Blender, Soccer, A Cappella, Marathon} 
+\end{longtable}
 
 \end{document}
