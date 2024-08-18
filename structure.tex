@@ -172,13 +172,26 @@
 	\expandafter\ifstrequal\expandafter{#4}{}{}{& #4\\[6pt]} % description
 }
 
-% Command for entering a separate qualification
-\newcommand{\educationentry}[5]{
-	\textsc{#1} & #2\\ % Duration and school
-        \expandafter\ifstrequal\expandafter{#4}{}{}{& #3\\} %Majors
-	%\expandafter\ifstrequal\expandafter{#4}{}{}{& {}\\} % Honours, achievements or distinctions (e.g. first class honours)
-	\expandafter\ifstrequal\expandafter{#4}{}{}{& #4\\} % GPA
-	\expandafter\ifstrequal\expandafter{#5}{}{}{& #5\\[6pt]} % Minor
+\usepackage{ifthen}
+
+\newcommand{\collge}[6]{
+    \textsc{#1} & #2\\ % Duration and school
+    \expandafter\ifstrequal\expandafter{#4}{}{}{& #3\\} % Majors
+    \expandafter\ifstrequal\expandafter{#4}{}{}{& #4\\} % GPA
+    \expandafter\ifstrequal\expandafter{#5}{}{}{& #5\\} % Minor (optional)
+    \expandafter\ifstrequal\expandafter{#6}{}{}{& #6\\} 
+    % \ifthenelse{\equal{#6}{}}{}{& #6\\[6pt]} % grad courses (optional)
+}
+
+\newcommand{\educationentry}[4]{
+    \textsc{#1} & #2\\ % Duration and school
+    \expandafter\ifstrequal\expandafter{#4}{}{}{& #3\\} % Majors
+    \expandafter\ifstrequal\expandafter{#4}{}{}{& #4\\} % GPA
+    % \ifthenelse{\equal{#6}{}}{}{& #6\\[6pt]} % grad courses (optional)
+}
+
+\newcommand{\skill}[2]{
+    \textsc{#1} & #2\\ % Duration and school
 }
 
 % Command for entering a separate table row -- used as a generic visual element for any section that uses a two column table
@@ -214,6 +227,12 @@
 	\expandafter\ifstrequal\expandafter{#2}{}{}{{{#2}}\\[2pt]} % Award title
 }
 
+\newcommand{\telescope}[4]{
+	\textsc{#1} & % Cycle
+	\expandafter\ifstrequal\expandafter{#2}{}{}{{\raggedright\textbf{#2}}\\[2pt]} %  Telescope
+ \expandafter\ifstrequal\expandafter{#3}{}{}{& {\textit{#3}}\\} % Proposal Title
+  \expandafter\ifstrequal\expandafter{#4}{}{}{& {#4}\\} % PIs
+}
 
 
 \newcommand{\talks}[2]{
