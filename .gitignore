@@ -8,3 +8,4 @@ output/
 *.log
 *.out
 *.pdf
+.DS_Store
